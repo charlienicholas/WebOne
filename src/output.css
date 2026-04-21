@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-blue-300: oklch(80.9% 0.105 251.813);
     --color-indigo-600: oklch(51.1% 0.262 276.966);
     --color-indigo-700: oklch(45.7% 0.24 277.023);
     --color-gray-50: oklch(98.5% 0.002 247.839);
@@ -257,8 +258,14 @@
   .table {
     display: table;
   }
+  .h-5 {
+    height: calc(var(--spacing) * 5);
+  }
   .h-16 {
     height: calc(var(--spacing) * 16);
+  }
+  .h-90 {
+    height: calc(var(--spacing) * 90);
   }
   .h-100 {
     height: calc(var(--spacing) * 100);
@@ -266,17 +273,32 @@
   .h-120 {
     height: calc(var(--spacing) * 120);
   }
+  .h-500 {
+    height: calc(var(--spacing) * 500);
+  }
+  .h-900 {
+    height: calc(var(--spacing) * 900);
+  }
   .h-\[30rem\] {
     height: 30rem;
   }
   .h-\[87vh\] {
     height: 87vh;
   }
+  .h-auto {
+    height: auto;
+  }
   .h-full {
     height: 100%;
   }
   .w-0 {
     width: calc(var(--spacing) * 0);
+  }
+  .w-5 {
+    width: calc(var(--spacing) * 5);
+  }
+  .w-5\/6 {
+    width: calc(5 / 6 * 100%);
   }
   .w-10 {
     width: calc(var(--spacing) * 10);
@@ -292,6 +314,21 @@
   }
   .w-80 {
     width: calc(var(--spacing) * 80);
+  }
+  .w-900 {
+    width: calc(var(--spacing) * 900);
+  }
+  .w-9000 {
+    width: calc(var(--spacing) * 9000);
+  }
+  .w-\[90\] {
+    width: 90;
+  }
+  .w-\[90vh\] {
+    width: 90vh;
+  }
+  .w-\[90vw\] {
+    width: 90vw;
   }
   .w-\[95vw\] {
     width: 95vw;
@@ -385,6 +422,21 @@
   .border-white {
     border-color: var(--color-white);
   }
+  .bg-blue-300 {
+    background-color: var(--color-blue-300);
+  }
+  .bg-blue-300\/20 {
+    background-color: color-mix(in srgb, oklch(80.9% 0.105 251.813) 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-blue-300) 20%, transparent);
+    }
+  }
+  .bg-blue-300\/50 {
+    background-color: color-mix(in srgb, oklch(80.9% 0.105 251.813) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-blue-300) 50%, transparent);
+    }
+  }
   .bg-indigo-600 {
     background-color: var(--color-indigo-600);
   }
@@ -425,6 +477,12 @@
   }
   .object-cover {
     object-fit: cover;
+  }
+  .p-7 {
+    padding: calc(var(--spacing) * 7);
+  }
+  .p-20 {
+    padding: calc(var(--spacing) * 20);
   }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
