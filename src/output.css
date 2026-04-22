@@ -13,7 +13,6 @@
     --color-gray-900: oklch(21% 0.034 264.665);
     --color-white: #fff;
     --spacing: 0.25rem;
-    --container-6xl: 72rem;
     --container-7xl: 80rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
@@ -260,8 +259,8 @@
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
-  .h-60 {
-    height: calc(var(--spacing) * 60);
+  .h-80 {
+    height: calc(var(--spacing) * 80);
   }
   .h-\[87vh\] {
     height: 87vh;
@@ -314,9 +313,6 @@
   .w-full {
     width: 100%;
   }
-  .max-w-6xl {
-    max-width: var(--container-6xl);
-  }
   .max-w-7xl {
     max-width: var(--container-7xl);
   }
@@ -329,14 +325,8 @@
   .resize {
     resize: both;
   }
-  .grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
   .grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .grid-cols-5 {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -379,6 +369,9 @@
   }
   .overflow-hidden {
     overflow: hidden;
+  }
+  .scroll-smooth {
+    scroll-behavior: smooth;
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
@@ -596,6 +589,12 @@
       border-color: var(--color-second);
     }
   }
+  .active\:border-b-3 {
+    &:active {
+      border-bottom-style: var(--tw-border-style);
+      border-bottom-width: 3px;
+    }
+  }
   .sm\:px-6 {
     @media (width >= 40rem) {
       padding-inline: calc(var(--spacing) * 6);
@@ -626,11 +625,6 @@
   .md\:h-18 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 18);
-    }
-  }
-  .md\:h-70 {
-    @media (width >= 48rem) {
-      height: calc(var(--spacing) * 70);
     }
   }
   .md\:w-1\/2 {
@@ -703,11 +697,6 @@
       width: calc(var(--spacing) * 100);
     }
   }
-  .lg\:grid-cols-5 {
-    @media (width >= 64rem) {
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-    }
-  }
   .lg\:px-8 {
     @media (width >= 64rem) {
       padding-inline: calc(var(--spacing) * 8);
@@ -716,11 +705,6 @@
   .lg\:py-32 {
     @media (width >= 64rem) {
       padding-block: calc(var(--spacing) * 32);
-    }
-  }
-  .xl\:h-80 {
-    @media (width >= 80rem) {
-      height: calc(var(--spacing) * 80);
     }
   }
 }
